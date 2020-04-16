@@ -1,207 +1,203 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<head>
+	<meta charset="UTF-8">
+	<title>Deafit - Encomendas</title>
+	<link rel="icon" href="www/icons/logodea_png.ico">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, 
+		maximum-scale=1, minimum-scale=1, width=device-width">
+	<link href="https://fonts.googleapis.com/css?family=Yatra+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
-		<title>LESS</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+	<link rel="stylesheet" type="text/css" href="www/css/materialize.min.css">
+	<link rel="stylesheet" type="text/css" href="www/icons/material.css">
+	<link rel="stylesheet" type="text/css" href="www/css/index.css">
+</head>
+<body>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
-
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
-p
-		<link rel="icon" href="img/icone_less.ico" type="image/x-icon" />
-		<link rel="shortcut icon" href="img/icone_less.ico" type="image/x-icon" />
-		
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-		<style type="text/css">
-		  .gist {max-width:1200px !important;}
-		  .gist-file
-		  .gist-data {max-height: 500px;max-width: 1200px;}
-		</style>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section> 					
-					<img width="400" height="160"  src="img/LESS_Logo.png" >						
-				</section>								
-				<section>
-					<section>
-						<h2>O que é o LESS?</h2>
-						<p>É uma linguagem dinâmica de estilos, que estende o CSS proporcionando o uso de variavéis, operadores e funções, um pré-processador criado em 2009 por Alexis Sellier, mais conhecido como @cloudhead. Originalmente escrito em Ruby e depois convertido para Javascript.</p>
-					</section>
-					<section>
-						<h2>O que são pré-processadores?</h2>
-						<p>Pré-processadores são programas que recebem uma entrada, normalmente um texto, efetuando conversões em seu conteúdo que podem incluir substituições e inclusões condicionais.</p>
-					</section>
-					<section>
-						<h2>Pré-Processadores CSS</h2>
-						<p>No caso dos pré-processadores CSS este fluxo não é diferente, onde os códigos são desenvolvidos através de seus recursos facilitadores, depois submetido ao processador tendo como resultado seu conteúdo 
-						   adequado as limitações do CSS. O principal benefício dos pré-processadores é o ganho na produtividade, seja na criação ou manutenção de estilos, gerando aplicações organizadas e sem duplicação de código.</p>
-					</section>
-				</section>
-				<section>
-					<section>
-							<h2>Vantagens</h2>							
-							<ul>
-								<li>Folhas de estilos dinâmicas;</li>
-								<li>Trabalhar com recursos fundamentais de programação, como variavéis e funções;</li>
-								<li>Reaproveitamento de código.</li>
-							</ul>                    
-					</section>
-				</section>
-				<section>
-					<section>
-						<h2> Instalação</h2>
-						<p>Vincule seus estilos <strong>.less</strong> com o atributo <strong>rel</strong> definido como: <strong>'stylesheet/less'</strong>:
-						<img src="img/LessInstall.jpg">
-						<p>Baixe o <strong>less.js</strong> no site oficial <a href="lessocss.org">lesscss.org</a> ou se prefereir diretamente no link: <a href="https://raw.github.com/less/less.js/v2.7.1/dist/less.min.js"> Get Less.js</a>
-						e inclua no <strong>'head'</strong> da sua página:</p>
-						<img src="img/LessInstall2.jpg">	
-					</section>
-				</section>
-				<section>
-					<section>
-						<h2> Variáveis </h2>
-						<p>Variáveis são bem vindas em qualquer lugar, e não poderiam faltar no CSS, quantas vezes já precisamos usar a mesma cor em diversos pontos diferentes?</p>
-						<script src="https://gist.github.com/gmouraws/8d8c3cacf8d1ed44982dd6b4ab3f4818.js"></script>						
-						<p><small><strong>Obs:</strong> Semelhante ao PHP, o LESS permite criar variáveis com strings como valor.</small></p>
-					</section>
-					<section>
-						<h2> Aninhamento </h2>
-						<p>Aninhamento(Nesting) é o que nos permite escrever o código praticamente sem repetições de seletores, o que facilita muito no desenvolvimento, pois no CSS não é possível organizar de forma hierárquica (um dentro do outro).</p>												
-						<script src="https://gist.github.com/gmouraws/37c4c170947352f0cf77d0b1684e8d0b.js"></script>
-					</section>
-					<section>
-						<h2> Pseudo-classes </h2>
-						<p> No LESS, é disponibilizado o símbolo "&" para herança de atributos e pseudo-classes/pseudo-elementos.</p>												
-						<script src="https://gist.github.com/gmouraws/be22fd40898925e47f1cedaafb8c1240.js"></script>
-					</section>					
-				</section>
-				<section>
-					<section>
-						<h2> Mixins </h2>
-						<p>São parecidos com funções, porém são usados para grupos reutilizáveis, permitem que você incorpore todas as propriedades de uma classe para outra, são como variavéis, mas para classes inteiras.</p>												
-						<script src="https://gist.github.com/gmouraws/ef1a87d8872f0e3f20079cc56b15a498.js"></script>
-					</section>
-					<section>
-						<h2> Mixins parametrizados </h2>
-						<p>O que significa que podem ter argumentos para aumentar sua utilidade.</p>												
-						<script src="https://gist.github.com/gmouraws/306432a982f36e718dbd98644f923869.js"></script>
-						<p>Podem também ter um valor padrão parametrizado.</p>
-						<script src="https://gist.github.com/gmouraws/f6ea654f380ea1a759c026d4b5023f82.js"></script>
-					</section>
-				</section>	
-				<section>
-					<section>
-						<h2> Operações </h2>
-						<p>Operações como adição, subtração, divisão e multiplicação de cores e valores das propriedades, podem ser usadas para criar diversas relações entre elas. </p>												
-						<script src="https://gist.github.com/gmouraws/57c5d7f2c56d4027b255f91d727cc7bc.js"></script>
-					</section>
-					<section>
-						<h2> Funções </h2>
-						<p>Existem diversas funções prontas no LESS, funções de texto, matemáticas, imagens, listas, tipos e cores.</p>												
-						<script src="https://gist.github.com/gmouraws/fa15411f8ef0ffff0c3d019338a3b986.js"></script>						
-						<p>Outras funções: <a href="http://lesscss.org/functions/#functions-overview">functions-overview - lesscss.org</a></p>
-					</section>
-					<section>
-						<h2> Palhetas de cores automáticas </h2>
-						<p>Imagine que no site (este é o site), tenha uma cor base principal e algumas cores secundárias combinando(default), 
-						ao invéz de ficar "catando" cores na tabela hexadecimal ou onde quer que seja, no LESS podemos usar funções para gerar estas cores: </p>												
-						<script src="https://gist.github.com/gmouraws/1bd65c5d007703225581af83fbbf6087.js"></script>
-						<p>No caso atual, vamos gerar cores 20% mais lights e 10% mais saturadas.</p>										
-					</section>
-				</section>		
-				<section>
-					<section>
-						<h2> Importações </h2>
-						<p>A ordem das importações no LESS, não é significativa, ele sempre encontrará os arquivos, desde que tenha a extensão <strong>.less</strong>, diferentemente do CSS padrão. </p>												
-						<p>São usadas para separar e organizar arquivos de temas ou até mesmo de variáveis, não acumulando centenas de códigos em um mesmo arquivo.</p>						
-						<script src="https://gist.github.com/gmouraws/4f068deedb6e7dcf0bb54f47a631fe80.js"></script>
-					</section>							
-				</section>	
-				<section>
-					<h2>Exemplos</h2>
-					<section>																	
-						<script src="https://gist.github.com/gmouraws/500fdc8d7c3745ad68002aeb081ee4e5.js" ></script>
-					</section>	
-					<section>						
-						<script src="https://gist.github.com/gmouraws/e06cb79556767b0477573a510d6bcec9.js"></script>
-					</section>	
-					<section>						
-						<script src="https://gist.github.com/gmouraws/84e73a4751c05522a8a292c0afe30357.js"></script>
-					</section>
-					<section>						
-						<script src="https://gist.github.com/gmouraws/cbd376214cc890aaf1f93d7e523f615f.js"></script>
-					</section>
-					<section> 
-						<p><img src="img/SelecionarEmpresaDirf.jpg"></p>						
-					</section>
-					<section> 
-						<p><img src="img/ExemploDirfAplub.jpg"></p>										
-					</section>
-					<section> 
-						<p><img src="img/ExemploDirfEcoAplub.jpg"></p>
-					</section>
-				</section>	
-				<section>
-					<section>
-							<h2>Conclusão</h2>
-							<p>O LESS oferece diversos recursos facilitadores, tanto para criação, quanto para a manutenção de CSS, sendo assim recomendado para sistemas novos e legados.</p>					    
-							<p>O uso de pré-processadores está sendo uma realidade no mercado, logo, deve ser encontrado em diversos portais, podendo também ser requisito em oportunidades de emprego.</p>
-					</section>
-				</section>	
-				<section>
-					<section>
-							<h3>
-							  Perguntas?
-							</h3>
-							<img class="pull-left" src="img/super_Cap.png" style="background-color: #fff; border-radius: 50%;">
-							<p class="tx-left margin-top-lg padding-top-lg">
-							  <strong>Guilherme Moura</strong>
-							  <br>
-							  <img style="margin:0;padding:0;-webkit-filter: invert(100%);filter: invert(100%);vertical-align: middle;" width="24" src="img/mark-github.png">&nbsp;
-								<a href="https://github.com/gmouraws">github.com/guilhermemoura</a>	
-							  <br>
-							  <img style="margin:0;padding:0;-webkit-filter: invert(100%);filter: invert(100%);vertical-align: middle;" width="24" src="img/mailbox.png">&nbsp;
-								guilherme.moura@aplub.com.br							 
-							</p>
-							<p class="margin-bottom-lg">
-							  <strong>Obrigado!</strong>
-							</p>
-					    
-					</section>
-				</section>	
-			</div>			
+<div class="navbar-fixed">
+	<nav class="">
+		<div class="topo-fixo">
+			<ul class="hide-on-med-and-down brand-logo">
+				<li>
+					<a href="index.html#" class="navbar-brand"></a>
+						<div class="logo logo-small"><a class="scrollSuave" href="index.html#"></a></div>						
+					</a>
+				</li>
+				<li class="left">
+					<a class="scrollSuave" href="index.html#">Home</a>
+				</li>
+				
+			</ul>
+			
+ 			<a href="#" data-activates="mobile-demo" class="button-collapse left"><i id="main_menu" class="material-icons">menu</i></a>
 		</div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+		<ul class="right hide-on-med-and-down brand-logo">
+			<li><a class="scrollSuave" href="#menu-products">Cardápio</a></li>
+			<li><a class="scrollSuave" href="#contact">Contato</a></li>
+		</ul>
 
-		<script>
-			// More info https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				history: true,
+		<ul class="side-nav" id="mobile-demo">
+			<li><a href="#">Home</a></li>
+			<li><a href="#menu-products">Cardápio</a></li>
+			<li><a href="#contact">Contato</a></li>
+		</ul>
+	</nav>
+</div>
 
-				// More info https://github.com/hakimel/reveal.js#dependencies
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+<div id="description" class="row valign-wrapper">
+	<div class="col s12 m5 l5">
+		<div class="center text-description">
+			<div class="logo"></div>
+			<p>Desde 2018 a Deafit elabora os melhores pratos, com direito a personalização e tudo sob medida conforme necessidade, temos diversas opções de salgados e doces! Faça sua encomenda e receba no conforto de sua casa,
+			entregamos em toda cidade de São Leopoldo e aceitamos diversos cartões de crédito/débito. #ficaemcasa</p>		
+		</div>
+	</div>
+</div> <!-- end description -->
+
+<section id="menu-products" class="container valign-wrapper">
+	<div>
+		<h2 class="center">Cardápio</h2>
+		<div class="row valign-wrapper">
+			<div class="col s12 m6 l6 right">
+		       	<ul class="tabs menu-opcoes">
+		        	<li class="tab"><a href="#pizzas" class="waves-effect 
+		        	waves-light black-text">Salgados </a></li>
+		            <li class="tab"><a href="#hamburgers" class="waves-effect 
+		            waves-light black-text">Doces </a></li>
+		    	</ul>			
+			</div>
+		</div>
+		<div id="pizzas">
+			<div class="row">
+				<div class="col s6 m6 l6">
+					<div class="menu-item item1"></div>
+					<div>
+						<h5>Quiche</h5>
+						<p>Alho poró e especiarias.</p>
+						 <div class="chip">R$ 7,00</div>
+					</div>
+				</div>
+				<div class="col s6 m6 l6">
+					<div class="menu-item item2">
+					</div>
+					<div>
+						<h5>Marmita - Carne</h5>
+						<p>100g arroz integral, moranga e 100g de carne moída</p>
+						<div class="chip">R$ 10,00</div>
+					</div>
+				</div>
+				<div class="col s6 m6 l6">
+					<div class="menu-item item3">
+					</div>
+					<div>
+						<h5>Marmita - Carne</h5>
+						<p>100g arroz integral, vagem e 100g de carne moída</p>
+						<div class="chip">R$ 10,00</div>
+					</div>
+				</div>
+			
+				<div class="col s6 m6 l6">
+					<div class="menu-item item4"></div>					
+					<div>
+						<h5>Marmita - Frango</h5>
+						<p>100g arroz integral, moranga e 100g de frango</p>
+						<div class="chip">R$ 10,00</div>
+					</div>
+				</div>
+				<div class="col s6 m6 l6">
+					<div class="menu-item item5"></div>
+					<div>
+						<h5>Pizza - Frango</h5>
+						<p>Massa, molho, mussarela, frango, orégano e cebola</p>
+						<div class="chip">R$ 6,50</div>
+					</div>
+				</div>
+				<div class="col s6 m6 l6">
+					<div class="menu-item item6"></div>
+					<div>
+						<h5>Torta fria</h5>
+						<p>Pão, maionese, cenoura, atum.</p>
+						<div class="chip">R$ 21,00kg</div>
+					</div>
+				</div>
+			</div> <!-- end row -->
+		</div> <!-- end section pizza -->
+		<div id="hamburgers">
+			<div class="row">
+				<div class="col s6 m6 l6">
+					<div class="menu-item item7"></div>
+					<div>
+						<h5>Mousse napolitano</h5>
+						<p>Creme de baunilia, chocolate e morango</p>
+						<div class="chip">R$ 4,00</div>
+					</div>
+				</div>
+				<div class="col s6 m6 l6">
+					<div class="menu-item item8"></div>
+					<div>
+						<h5>Bolo de pote</h5>
+						<p>Pão de ló, brigadeiro e leite condensado</p>
+						<div class="chip">R$ 8,00</div>
+					</div>
+				</div>
+			
+				<div class="col s6 m6 l6">
+					<div class="menu-item item9"></div>
+					<div>
+						<h5>Torta</h5>
+						<p>Pão de ló, morango, leite condensado, bombom e castanhas</p>
+						<div class="chip">R$ 21,90kg</div>
+					</div>
+				</div>				
+			</div>	
+		</div>
+		
+	</div>
+</section> <!-- end menu -->
+
+<section id="contact">
+	<div class="mapa">
+		<img src="www/images/mapa.jpg"/>
+	</div>
+</section>
+
+<footer class="page-footer grey darken-4">
+	<div class="container">
+		<div class="row valign-wrapper">
+			<div class="col s12 m4 l4">
+				<p class="white-text"><i class="material-icons">location_on</i>Tv. Gambia 1. Feitoria - São Leopoldo</p>	
+				<p class="white-text"><i class="material-icons">smartphone</i>(51) 99848-8944</p>		
+			</div>
+			<div class="col s12 m4 l4 hide-on-med-and-down">
+				<div class="logo"></div>
+			</div>
+			<div class="col s12 m4 l4 ">
+			<div class="valign-wrapper">
+				<div class="">		
+					<ul class="social-medias">
+						<li><a class="grey-text text-lighten-3 facebook" href="https://www.facebook.com/andrea.moura.501">Facebook</a></li>
+						<li><a class="grey-text text-lighten-3 instagram" href="https://www.instagram.com/deafit_oficial/">Instagram</a></li>
+					</ul>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer-copyright black">
+		<div class="container">
+			© 2020 Copyright Deafit
+			<a class="grey-text text-lighten-4 right" href="https://github.com/gmouraws">github.com/guilhermemoura</a>	
+		</div>
+	</div>
+</footer>
+
+<script type="text/javascript" src="www/js/jquery.min.js"></script>
+<script type="text/javascript" src="www/js/materialize.min.js"></script>
+<script type="text/javascript" src="www/js/index.js"></script>
+</body>
 </html>
